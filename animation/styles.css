@@ -36,7 +36,7 @@
 
   animation-name: pm1;
   animation-fill-mode: forwards;
-  animation-duration: 2s;
+  animation-duration: 0.7s;
 
 }
 @keyframes pm1 {
@@ -107,7 +107,7 @@
   width: 100%;
   height: 110px;
 
-  clip-path: polygon(50% 0%, 100% 100%, 98% 100%, 50% 5%, 2% 100%, 0 100%);
+  clip-path: polygon(50% 0%, 100% 48%, 50% 1%, 51% 0, 0 49%);;
   background-color: var(--prymary);
   background-size: cover;
   background-position: -10px center;
@@ -129,7 +129,7 @@
 
   }
   100%{
-    margin-top: 20px;  
+    margin-top: 50px;  
     opacity: 1;
 
   }
