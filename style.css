@@ -7,12 +7,23 @@
   font-family: 'Poppins', sans-serif;
 }
 
+:root{
+  --primary : white;
+  --apicade :12px;
+  --tranformX : translateX();
+  --tranformY: translateY();
+  --rotacion: rotate(50deg);
+}
+
+
+
+
 
 
 
 
 footer{
-  color: #fff;
+  color:var(--primary);
   background-image: linear-gradient(90deg, rgba(39,27,111,1) 0%, rgba(87,25,45,1) 100%);
   position: relative;
   width: 100%;
@@ -20,6 +31,7 @@ footer{
   top:350px;
   border-top-left-radius: 70px;
   font-size: 0.8rem;
+
 }
 
 
@@ -186,6 +198,9 @@ input[type=mail]{
   margin: 2%;
 }
 
+.carousel-inner{
+  height: 100%;
+}
 
 .social-icon{
   position: relative;
@@ -271,3 +286,7 @@ input[type=mail]{
 
 }
 
+
+.border-radius-image{
+  border-radius: 50%;
+}
