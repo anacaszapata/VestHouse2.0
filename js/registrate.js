@@ -1,5 +1,7 @@
 const URLCiudades = "https://api-colombia.com/api/v1/City";
 
+const KeysUsuarios = "usuarios";
+
 async function pintarCiudades() {
   let ciudades = localStorage.getItem("ciudades");
 
@@ -40,7 +42,6 @@ class Persona {
     this.inquietud = inquietud;
   }
 
-
   setPersonaLocalStorage() {
     let valores = {
       nombre: this.nombre,
@@ -50,23 +51,61 @@ class Persona {
       inquietud: this.inquietud,
     };
 
-    localStorage.setItem("persona", JSON.stringify(valores));
-    location.href("./index.html")
+
+    if(this.validarUsuarioExiste(this.email, this.telefono)){
+      Swal.fire({
+        title: 'Error!',
+        text: 'Este usuario ya fue registrado',
+        icon: 'error',
+        confirmButtonText: 'Cool'
+      })
+
+      return
+    }
+
+    let usuariosAntiguos = localStorage.getItem(KeysUsuarios)||"[]"
+    usuariosAntiguos = JSON.parse(usuariosAntiguos)
+
+    usuariosAntiguos.push(valores)
+
+    localStorage.setItem(KeysUsuarios, JSON.stringify(usuariosAntiguos));
+    Swal.fire({
+      title: "<strong>Registro exitoso</strong>",
+      icon: "success",
+      focusConfirm: true,
+    }).then(() =>{
+       location.href = "./index.html";
+    });
+  }
+
+  validarUsuarioExiste(email, telefono) {
+    let usuarios = localStorage.getItem(KeysUsuarios);
+    usuarios = JSON.parse(usuarios);
+
+    if (usuarios != undefined) {
+      return usuarios.some((usuario) => (usuario.email == email || usuario.telefono == telefono));
+    }
+
+    return false;
   }
 }
-
-pintarCiudades();
 
 document
   .getElementById("btn-registrarse")
   .addEventListener("click", function (event) {
+    
     let nombre = document.getElementById("nombre").value;
     let telefono = document.getElementById("telefono").value;
     let email = document.getElementById("email").value;
     let ciudad = document.getElementById("selectElement").value;
     let inquietud = document.getElementById("inquietud").value;
 
-    persona = new Persona(nombre, telefono, email, ciudad, inquietud)
-    persona.setPersonaLocalStorage()
+    persona = new Persona(nombre, telefono, email, ciudad, inquietud);
+    
+    
+    persona.setPersonaLocalStorage();
 
+    
   });
+
+pintarCiudades();
