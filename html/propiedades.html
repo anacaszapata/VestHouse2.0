@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/propiedades.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <title>Document</title>
+</head>
+<body>
+
+
+  <nav class="navbar fixed-top" style="backdrop-filter: blur(50px); height: 7rem">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <a href="./index.html">
+            <img src="../assets/logoNegro.png" style="width: 200px" alt="" />
+        </a>
+
+        <ul class="d-flex gap-4" style="list-style: none">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./registrate.html">
+                    Registrate
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                    Iniciar sesión
+                </a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Idioma
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Español</a></li>
+                    <li><a class="dropdown-item" href="#">Ingles</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel" style="height: 100vh">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Inicio</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./about_us.html">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Paso a Paso</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Propiedades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Galeria</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+  <div class="titulo">
+    <h1><strong>nuestras mejores propiedades
+      inmobiliarias
+    </strong></h1>
+  </div>
+
+ <div class="busqueda">
+  
+   <p>Barra de busqueda</p>&nbsp<i class="fa-solid fa-magnifying-glass"></i>
+
+
+   
+ 
+ </div>
+  <form action="#">
+    <label for="lang"></label>
+    <select name="busquedas" id="busquedas">
+      <option value="inicio"></option>
+      <option value="venta">venta</option>
+      <option value="oferta-compra">oferta-compra</option>
+      <option value="inversion">inversion</option>
+      
+    </select>
+    
+</form>
+
+  <section class="cartas">
+  <div class="parent">
+    <div class="card" style="width: 25rem;"><a href="proyecto sol/sol.html">
+      <img src="img/casa1/casa6.jpeg" card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5 class="card-title">Proyecto Sol</h5>
+        <p class="card-text">Medellin,colombia</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="container">
+  
+            <div class="progress progress-striped">
+              <div class="progress-bar progress-bar-success" role="progressbar" style="width:40%">
+                70%
+              </div>
+            </div>
+        
+          </div> 
+        </li>
+        <p><i class="fa-solid fa-money-bill"></i> &nbspGanancias: 8,65%</p>
+        <p><i class="fa-brands fa-codepen"></i> &nbspfracciones disponisbles: 324</p>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link"><a class="btn btn-primary" href="proyecto sol/sol.html">Detalles</a> </a>
+        
+      </div>
+    </div>
+     
+
+
+    <div class="card" style="width: 25rem;"><a href="proyecto montaña/montaña.html"><img src="img/montaña1.jpg"  class="card-img-top" alt="..."></a>
+      
+      <div class="card-body">
+        <h5 class="card-title">Proyecto montaña</h5>
+        <p class="card-text">Medellin,colombia</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="container">
+  
+            <div class="progress progress-striped">
+              <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">
+                70%
+              </div>
+            </div>
+        
+          </div> 
+        </li>
+        <p>A second item</p>
+        <p>A third item</p>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link"><a class="btn btn-primary" href="proyecto montaña/montaña.html">Detalles</a></a>
+        
+      </div>
+      
+
+
+
+    </div>
+    <div class="card" style="width: 25rem;">
+      <img src="img/pueblo2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Proyecto macondo</h5>
+        <p class="card-text">Medellin,colombia</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="container">
+  
+            <div class="progress progress-striped">
+              <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">
+                70%
+              </div>
+            </div>
+        
+          </div> 
+        </li>
+        <p>A second item</p>
+        <p>A third item</p>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+
+
+
+    <div class="card" style="width: 25rem;">
+      <img src="img/sol4.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Proyecto Sol</h5>
+        <p class="card-text">Medellin,colombia</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="container">
+  
+            <div class="progress progress-striped">
+              <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">
+                70%
+              </div>
+            </div>
+        
+          </div> 
+        </li>
+        <p>A second item</p>
+        <p>A third item</p>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+
+
+    <div class="card" style="width: 25rem;">
+      <img src="img/montaña3.jpg"card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Proyecto Sol</h5>
+        <p class="card-text">Medellin,colombia</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="container">
+            <div class="progress progress-striped">
+              <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">
+                70%
+              </div>
+            </div>
+          </div> 
+        </li>
+        <p>A second item</p>
+        <p>A third item</p>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+
+
+    <div class="card" style="width: 25rem;">
+      <img src="img/pueblo3.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Proyecto Sol</h5>
+        <p class="card-text">Medellin,colombia</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="container">
+  
+            <div class="progress progress-striped">
+              <div class="progress-bar progress-bar-success" role="progressbar" style="width:40%">
+                70%
+              </div>
+            </div>
+        
+          </div> 
+        </li>
+        <p>A second item</p>
+        <p>A third item</p>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+
+
+
+
+    <div class="card" style="width: 25rem;">
+      <img src="img/sol2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Proyecto Sol</h5>
+        <p class="card-text">Medellin,colombia</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="container">
+  
+            <div class="progress progress-striped">
+              <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">
+                70%
+              </div>
+            </div>
+        
+          </div> 
+        </li>
+        <p>A second item</p>
+        <p>A third item</p>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+    <div class="card" style="width: 25rem;">
+      <img src="img/montaña2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Proyecto Sol</h5>
+        <p class="card-text">Medellin,colombia</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="container">
+  
+            <div class="progress progress-striped">
+              <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">
+                70%
+              </div>
+            </div>
+        
+          </div> 
+        </li>
+        <p>A second item</p>
+        <p>A third item</p>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+    <div class="card" style="width: 25rem;">
+      <img src="img/pueblo1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Proyecto Sol</h5>
+        <p class="card-text">Medellin,colombia</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="container">
+  
+            <div class="progress progress-striped">
+              <div class="progress-bar progress-bar-success" role="progressbar" style="width:70%">
+                70%
+              </div>
+            </div>
+        
+          </div> 
+        </li>
+        <p>A second item</p>
+        <p>A third item</p>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+    
+  </div>
+  </section>
+</body>
+</html>

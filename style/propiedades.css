@@ -1,0 +1,48 @@
+
+
+
+form{
+  margin-bottom: 150px;
+}
+
+
+.titulo {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  background-color: grey;
+  height: 200px;
+  align-items: center;
+  
+}
+
+.card {
+  text-align: center;
+  box-shadow: -9px 11px 6px -3px #00000052 ;
+  padding: 15px;
+  border-radius: 50%;
+}
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 180px;
+  grid-row-gap: 187px;
+}
+
+.cartas {
+  display: flex;
+  justify-content: center;
+}
+
+.card img {
+  width: 367px;
+  border-radius: 10px;
+  
+}
+.busqueda{
+  display: flex;
+}
+
