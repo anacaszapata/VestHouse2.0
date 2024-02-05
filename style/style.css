@@ -315,6 +315,10 @@ input[type=mail]{
   color: #5E17EB
 }
 
+.opcity-image{
+  filter: brightness(0.5);
+
+
 .timeline-steps {
   display: flex;
   justify-content: center;
@@ -376,4 +380,5 @@ input[type=mail]{
   min-width: 3rem;
   border-radius: 6.25rem;
   opacity: .5
+
 }
