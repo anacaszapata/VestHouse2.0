@@ -314,3 +314,6 @@ input[type=mail]{
 .color-morado{
   color: #5E17EB
 }
+.opcity-image{
+  filter: brightness(0.5);
+}

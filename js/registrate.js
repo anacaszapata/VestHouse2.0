@@ -91,8 +91,8 @@ class Persona {
 }
 
 document
-  .getElementById("btn-registrarse")
-  .addEventListener("click", function (event) {
+  .getElementById("form-registro")
+  .addEventListener("submit", function (event) {
     
     let nombre = document.getElementById("nombre").value;
     let telefono = document.getElementById("telefono").value;
@@ -105,7 +105,7 @@ document
     
     persona.setPersonaLocalStorage();
 
-    
+    event.preventDefault()
   });
 
 pintarCiudades();
