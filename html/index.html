@@ -20,26 +20,26 @@
 
             <ul class="d-flex gap-4" style="list-style: none">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./registrate.html">
+                    <a class="nav-link active" id="registrateNav" aria-current="page" href="./registrate.html">
                         Registrate
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">
+                    <a class="nav-link active" id="loginNav" aria-current="page" href="#">
                         Iniciar sesión
                     </a>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="#" id="idiomaNav" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Idioma
                     </a>
 
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Español</a></li>
-                        <li><a class="dropdown-item" href="#">Ingles</a></li>
+                    <ul id="lenguage" class="dropdown-menu">
+                        <li><a class="dropdown-item" onclick="cambiarIdioma('es')" href="#">Español</a></li>
+                        <li><a class="dropdown-item" onclick="cambiarIdioma('en')" href="#">Ingles</a></li>
                     </ul>
                 </li>
             </ul>
@@ -93,14 +93,17 @@
                     <img src="../assets/casa2.jpeg" class="opcity-image" width="100%" height=920px alt="..." />
                     <div class="carousel-caption d-none d-md-block" style="text-align: left !important; top:20%">
                         <div>
-                            <h1>Invierte en el futuro que quieres crear</h1>
-                            <span>Con VestHouse, Invierte desde bajos montos, de manera
+                            <h1 id="tituloCarrousel1">Invierte en el futuro que quieres crear</h1>
+                            <span id="subCarrousel1">Con VestHouse, Invierte desde bajos montos, de manera
                                 digital </span>
                             <br>
-                            <span>y segura en proyectos inmobiliarios que te
+                            <span id="sub2subCarrousel1">y segura en proyectos inmobiliarios que te
                                 apasionan.</span>
                             <br>
-                            <button class="btn btn-light mb-3">Conoce nuestros proyectos</button>
+                            <button class="btn btn-light mb-3" id="btnConoceProyectos1">Conoce nuestros
+                                proyectos</button>
+
+
                             <br>
                             <a href="#invertir-ahora" class="btn btn-primary mt-5">
                                 <svg width="39" height="40" viewBox="0 0 39 40" fill="none"
@@ -117,14 +120,16 @@
                     <img src="../assets/casa3.jpeg" class="d-block w-100 opcity-image" height=920px alt="..." />
                     <div class="carousel-caption d-none d-md-block" style="text-align: left !important; top:20%">
                         <div>
-                            <h1>Invierte en el futuro que quieres crear</h1>
-                            <span>Con VestHouse, Invierte desde bajos montos, de manera
+                            <h1 id="tituloCarrousel2">Invierte en el futuro que quieres crear</h1>
+                            <span id="subCarrousel2">Con VestHouse, Invierte desde bajos montos, de manera
                                 digital </span>
                             <br>
-                            <span>y segura en proyectos inmobiliarios que te
+                            <span id="sub2subCarrousel2">y segura en proyectos inmobiliarios que te
                                 apasionan.</span>
                             <br>
-                            <button class="btn btn-light mb-3">Conoce nuestros proyectos</button>
+                            <button class="btn btn-light mb-3" id="btnConoceProyectos2">Conoce nuestros
+                                proyectos</button>
+
                             <br>
                             <a href="#invertir-ahora" class="btn btn-primary mt-5">
                                 <svg width="39" height="40" viewBox="0 0 39 40" fill="none"
@@ -141,14 +146,15 @@
                     <img src="../assets/casa4.jpeg" class="d-block w-100 opcity-image" height=920px alt="..." />
                     <div class="carousel-caption d-none d-md-block " style="text-align: left !important; top:20%">
                         <div>
-                            <h1>Invierte en el futuro que quieres crear</h1>
-                            <span>Con VestHouse, Invierte desde bajos montos, de manera
+                            <h1 id="tituloCarrousel3">Invierte en el futuro que quieres crear</h1>
+                            <span id="subCarrousel3">Con VestHouse, Invierte desde bajos montos, de manera
                                 digital </span>
                             <br>
-                            <span>y segura en proyectos inmobiliarios que te
+                            <span id="sub2subCarrousel3">y segura en proyectos inmobiliarios que te
                                 apasionan.</span>
                             <br>
-                            <button class="btn btn-light mb-3">Conoce nuestros proyectos</button>
+                            <button class="btn btn-light mb-3" id="btnConoceProyectos3">Conoce nuestros
+                                proyectos</button>
                             <br>
                             <a href="#invertir-ahora" class="btn btn-primary mt-5">
                                 <svg width="39" height="40" viewBox="0 0 39 40" fill="none"
@@ -173,7 +179,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <button class="btn btn-info w-100 mt-3">Invierte ahora</button>
+        <button id="btnInvierteAhora" class="btn btn-info w-100 mt-3">Invierte ahora</button>
 
     </section>
 
@@ -181,15 +187,15 @@
         <div class="d-flex justify-content-between container mt-5">
             <div>
                 <h1 class="text-info text-center">477</h1>
-                <p class="text-center text-secondary">Total de inversionistas</p>
+                <p class="text-center text-secondary" id="totalInversionistas">Total de inversionistas</p>
             </div>
             <div>
                 <h1 class="text-info text-center">+14% E.A</h1>
-                <p class="text-center text-secondary">Retorno Estimado</p>
+                <p class="text-center text-secondary" id="retornoEstimado">Retorno Estimado</p>
             </div>
             <div>
                 <h1 class="text-info text-center">$334.000 M</h1>
-                <p class="text-center text-secondary">Inversion a la fecha</p>
+                <p class="text-center text-secondary" id="inverionALaFecha">Inversion a la fecha</p>
             </div>
 
         </div>
@@ -233,46 +239,54 @@
 
 
     <section class="px-lg-5" style="margin-bottom: 10rem">
-        <div class="d-flex justify-content-center gap-5">
-            <div class="card card-items-principal">
-                <img src="../assets/logoNegro.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Misión</h5>
-                    <p class="card-text">
-                        This is a wider card with supporting text below as a natural
-                        lead-in to additional content. This content is a little bit
-                        longer.
-                    </p>
-                    <p class="card-text">
-                        <small class="text-body-secondary">Last updated 3 mins ago</small>
-                    </p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-items-principal">
+                    <img src="../assets/logoNegro.png" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title" id="mision">Misión</h5>
+                        <p class="card-text" id="misionTexto">
+                            Nuestro objetivo es ofrecer educación financiera y oportunidades de inversión accesibles.
+                            Proporcionamos a los usuarios recursos y herramientas para tomar decisiones informadas,
+                            ayudándoles a crecer financieramente. Ofrecemos comisiones justas y pagos mensuales basados
+                            en inversiones, manteniendo altos estándares de integridad y servicio al cliente en un
+                            entorno seguro.
+                        </p>
+                        <p class="card-text">
+                            <small class="text-body-secondary">Last updated 3 mins ago</small>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="card mx-5 card-items-principal">
-                <img src="../assets/logoNegro.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Visión</h5>
-                    <p class="card-text">
-                        This card has supporting text below as a natural lead-in to
-                        additional content.
-                    </p>
-                    <p class="card-text">
-                        <small class="text-body-secondary">Last updated 3 mins ago</small>
-                    </p>
+            <div class="col-md-4">
+                <div class="card mx-5 card-items-principal">
+                    <img src="../assets/logoNegro.png" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Visión</h5>
+                        <p class="card-text">
+                            This card has supporting text below as a natural lead-in to
+                            additional content.
+                        </p>
+                        <p class="card-text">
+                            <small class="text-body-secondary">Last updated 3 mins ago</small>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="card card-items-principal">
-                <img src="../assets/logoNegro.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Proposito</h5>
-                    <p class="card-text">
-                        This is a wider card with supporting text below as a natural
-                        lead-in to additional content. This card has even longer content
-                        than the first to show that equal height action.
-                    </p>
-                    <p class="card-text">
-                        <small class="text-body-secondary">Last updated 3 mins ago</small>
-                    </p>
+            <div class="col-md-4">
+                <div class="card card-items-principal">
+                    <img src="../assets/logoNegro.png" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Proposito</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural
+                            lead-in to additional content. This card has even longer content
+                            than the first to show that equal height action.
+                        </p>
+                        <p class="card-text">
+                            <small class="text-body-secondary">Last updated 3 mins ago</small>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -332,7 +346,7 @@
         </div>
         <div class="w-50">
             <h2 class="bold text-center" id="tiempo-simulado">1 año</h2>
-            
+
             <!-- <article class="d-flex justify-content-between">
                 <div>
                     <p>inversionista</p>
@@ -350,12 +364,12 @@
                     <p>Ubicación</p>
                     <p>Monto</p>
                 </div>
-            
+
                 <div>
                     <p>Ana sofia</p>
                     <p id="ubicacionProyecto"></p>
                     <p id="montoDeInversion"></p>
-                    
+
                 </div>
             </article>
         </div>
@@ -433,7 +447,133 @@
             </div>
         </div>
     </section>
-    <script type="module" src="../js/index.js"></script>
+    <section>
+        <!-- <div class="container my-5"> -->
+        <!-- Footer -->
+        <footer class="text-center text-lg-start text-white" style="background-color: #45526e">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Links -->
+                <section class="">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">
+                                Company name
+                            </h6>
+                            <p>
+                                Here you can use rows and columns to organize your footer
+                                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                            <p>
+                                <a class="text-white">MDBootstrap</a>
+                            </p>
+                            <p>
+                                <a class="text-white">MDWordPress</a>
+                            </p>
+                            <p>
+                                <a class="text-white">BrandFlow</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Bootstrap Angular</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">
+                                Useful links
+                            </h6>
+                            <p>
+                                <a class="text-white">Your Account</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Become an Affiliate</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Shipping Rates</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Help</a>
+                            </p>
+                        </div>
+
+                        <!-- Grid column -->
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                            <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
+
+                <hr class="my-3">
+
+                <!-- Section: Copyright -->
+                <section class="p-3 pt-0">
+                    <div class="row d-flex align-items-center">
+                        <!-- Grid column -->
+                        <div class="col-md-7 col-lg-8 text-center text-md-start">
+                            <!-- Copyright -->
+                            <div class="p-3">
+                                © 2020 Copyright:
+                                <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                            </div>
+                            <!-- Copyright -->
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                            <!-- Facebook -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="fab fa-facebook-f"></i></a>
+
+                            <!-- Twitter -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="fab fa-twitter"></i></a>
+
+                            <!-- Google -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="fab fa-google"></i></a>
+
+                            <!-- Instagram -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                </section>
+                <!-- Section: Copyright -->
+            <!-- </div> -->
+            <!-- Grid container -->
+        </footer>
+        <!-- Footer -->
+        </div>
+        <!-- End of .container -->
+    </section>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>
