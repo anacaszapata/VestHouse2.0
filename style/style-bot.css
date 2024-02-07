@@ -1,0 +1,166 @@
+
+.chat {
+    width: 400px;
+    height: 600px;
+    background-color: #2b3e38;
+    position: fixed;
+    top: 30%;
+    right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 1px 5px 1px rgba(0, 0, 0, 0.61);
+    border-radius: 12px;
+  }
+  .chat h2 {
+    color: aliceblue;
+    text-align: center;
+    margin-top: 10%;
+    z-index: 2;
+    position: absolute;
+    top: 0%;
+  }
+  
+  
+  
+  
+  .textsCHats {
+    position: relative;
+    width: 90%;
+    height: 80%;
+    background-color: white;
+    margin-top: 90px;
+    border-radius: 0px 0px 30px 30px;
+  }
+  
+  .listaResponse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  .listaResponse li {
+    position: relative;
+    left: 0;
+    width: 200px;
+    margin: 12px;
+    height: 0%;
+    background-color: rgba(45, 112, 112, 0.493);
+    z-index: 2;
+    padding: 2px;
+    margin-left: 12px;
+    left: -40px;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+  
+    /*Anims*/
+    animation-name: burblechat;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+  
+  
+  
+  }
+  
+  .listaUser{
+    position: absolute;
+    bottom: 30%;
+    right: 0;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  
+  
+  
+  
+  
+  @keyframes burblechat {
+    
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(5px);
+  }
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .usserRespond {
+    position: absolute;
+    bottom: 0;
+    background-color: #2b3e38;
+    padding: 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  
+  
+  
+  .chat{
+   opacity: 0;
+   transition: 0.5s;
+  }
+  
+  
+  
+  
+  
+  .usserRespond #RespuestaUser {
+    width: 90%;
+    height: 30px;
+  }
+  #chatBa {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  
+  }
+  
+  
+  #submit{
+    width: 90px;
+    background-image: url(/VestHouse/assets/send-message-icon-paper-plane-260nw-1237746526-removebg-preview.png);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 12px;
+    margin-left: 12px;
+  }
+  
+  .chatbotBut{
+    width: 90px;
+    position: fixed;
+    top: 90%;
+    left: 94%;
+    height: 90px;
+    background-image: url(/VestHouse/assets/chatbot.png);
+    background-size:cover ;
+    border-radius: 100%;
+    transition: 0.3s ease-in-out;
+    box-shadow: 3px 1px 5px 1px rgba(0, 0, 0, 0.61);
+  }
+.chatbotBut:hover{
+    transform: rotate(10deg);
+    top: 89%;
+  
+  }

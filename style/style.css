@@ -334,7 +334,7 @@ input[type=mail]{
   .timeline-steps .timeline-step:not(:last-child):after {
       content: "";
       display: block;
-      border-top: .25rem dotted #5E17EB;
+      border-top: .25rem dotted #0dcaf0;
       width: 265px;
       position: absolute;
       left: 7.5rem;
@@ -343,7 +343,7 @@ input[type=mail]{
   .timeline-steps .timeline-step:not(:first-child):before {
       content: "";
       display: block;
-      border-top: .25rem dotted #5E17EB;
+      border-top: .25rem dotted #0dcaf0;
       width: 50px;
       position: absolute;
       right: 7.5rem;
@@ -363,7 +363,6 @@ input[type=mail]{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #5E17EB;
 
 }
 
@@ -470,13 +469,6 @@ input[type=mail]{
   top: 0;
 }
 
-.card__category{
-  color: var(--text-light);
-  font-size: 0.9rem;
-  margin-bottom: var(--spacing-s);
-  text-transform: uppercase;
-}
-
 .card__heading{
   color: var(--text-lighter);
   font-size: 1.9rem;
@@ -484,3 +476,58 @@ input[type=mail]{
   line-height: 1.4;
   word-spacing: 100vw;
 }
+
+
+.bg-image {
+  position: relative;
+  overflow: hidden;
+  height: 50vh; /* Abarca el 100% del viewport */
+  top: 300px;
+}
+.bg-image img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  
+}
+.texto-centrado {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+
+.wrapper-grey {
+  background: #F4F4F4;
+}
+
+.card {
+  height: 250px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  color: white;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.card-description h2 {
+  font-size: 22px;
+}
+.card-description p {
+  font-size: 15px;
+}
+
+
