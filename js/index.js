@@ -1,3 +1,15 @@
+function cargarInversor(){
+    let usuarioLogueado = localStorage.getItem("usuarioLogueado")
+    if(usuarioLogueado !== null) {
+      usuarioLogueado = JSON.parse(usuarioLogueado)
+      document.getElementById("usuarioInversor").innerText = usuarioLogueado.usuario
+    }
+  
+      document.getElementById("usuarioInversor").innerText = "inversionista"
+    
+  }
+  cargarInversor()
+
 const textosIngles = {
     tituloCarrousel1: "INVEST IN YOUR FUTURE,",
     tituloCarrousel2: "INVEST IN YOUR FUTURE,",
