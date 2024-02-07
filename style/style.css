@@ -29,6 +29,15 @@
 }
 
 
+.bg-opacity {
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta el valor de opacidad (el último valor) según tus necesidades */
+  height: 100vh; /* Esto asegura que el contenedor tenga la altura completa del viewport */
+  color: white; /* Cambia el color del texto para que sea visible en el fondo oscuro */
+}
+
+
+
+
 
 
 
