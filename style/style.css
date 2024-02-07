@@ -300,10 +300,6 @@ input[type=mail]{
 }
 
 
-.color-morado{
-  color: #5E17EB
-}
-
 .opcity-image{
   filter: brightness(0.5);
 }
@@ -476,7 +472,7 @@ input[type=mail]{
 .bg-image {
   position: relative;
   overflow: hidden;
-  height: 50vh; /* Abarca el 100% del viewport */
+  height: 50vh; 
   top: 300px;
 }
 .bg-image img {
@@ -526,3 +522,29 @@ input[type=mail]{
 }
 
 
+.barra-temporizador {
+ /* Puedes ajustar el color según tus preferencias */
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px; /* Ajustar según sea necesario */
+}
+
+.countdown {
+  text-align: center;
+}
+
+
+#timer {
+  font-size: 2em;
+  color: white;
+  margin: 10px 0;
+}
+
+
+#timer::before,
+#timer::after {
+  content: "";
+  display: block;
+  font-size: 1.2em;
+  color: #999;
+}
