@@ -12,26 +12,34 @@
 </head>
 
 <body>
-    <nav class="navbar bg-body-tertiary fixed-top">
-        <div class="container-fluid d-flex align-items-center justify-content-between" id="navBar">
+    <nav class="navbar fixed-top" style="backdrop-filter: blur(50px); height: 7rem">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
             <a href="./index.html">
-                <img src="./assets/logo negro.png" style="width: 200px;" alt="">
+                <img src="../assets/logoNegro.png" style="width: 200px" alt="" />
             </a>
-            <ul class="d-flex gap-4" style="list-style: none;">
+
+            <ul class="d-flex gap-4" style="list-style: none">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Registrate</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inciar sesion</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        idioma
+                    <a class="nav-link active" id="registrateNav" aria-current="page" href="./registrate.html">
+                        Registrate
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Español</a></li>
-                        <li><a class="dropdown-item" href="#">Ingles</a></li>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" id="loginNav" aria-current="page" href="./login.html">
+                        Iniciar sesión
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="idiomaNav" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Idioma
+                    </a>
+
+                    <ul id="lenguage" class="dropdown-menu">
+                        <li><a class="dropdown-item" onclick="cambiarIdioma('es')" href="#">Español</a></li>
+                        <li><a class="dropdown-item" onclick="cambiarIdioma('en')" href="#">Ingles</a></li>
                     </ul>
                 </li>
             </ul>
@@ -40,8 +48,9 @@
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
+                aria-labelledby="offcanvasNavbarLabel" style="height: 100vh">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Inicio</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -49,7 +58,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inico</a>
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="./about_us.html">Sobre nosotros</a>
@@ -69,61 +78,74 @@
         </div>
     </nav>
 
-   <div class="container text-center  mt-5">
-     <h1 class="display-3 text-center">¿Quienes somos?</h1>
-   </div>
+    <div class="container text-center  mt-5">
+        <h1 class="display-3  bg-info">¿Quienes somos?</h1>
+    </div>
 
-   <section class="hero-section">
-    <div class="card-grid">
-      <a class="card" href="#">
-        <div class="card__background" style="background-image: url(../assets/camino-libertad.jpeg); height: 400px;"></div>
-        <div class="card__content">
-          <p class="card__category">¿Qué queremos?</p>
-          <h3 class="card__heading fs-5 ">Queremos ser tu socio en la libertad financiera y seguridad económica</h3>
-        </div>
-      </a>
-      <a class="card" href="#">
-        <div class="card__background" style="background-image: url(../assets/educacion.jpeg); height: 400px;"></div>
-        <div class="card__content">
-          <p class="card__category">¿Qué buscamos?</p>
-          <h3 class="card__heading fs-5">Cultivar una comunidad de individuos financieramente alfabetizados</h3>
-        </div>
-      </a>
-      <a class="card" href="#">
-        <div class="card__background" style="background-image: url(../assets/equipo.jpeg); height: 400px;"></div>
-        <div class="card__content">
-          <p class="card__category">¿Cómo lo logramos?</p>
-          <h3 class="card__heading fs-5">Con un equipo comprometido y un enfoque estratégico en la inversión.</h3>
-        </div>
-      </li>
-      <a class="card" href="#">
-        <div class="card__background" style="background-image: url(../assets/graficos.webp); height: 400px;"></div>
-        <div class="card__content">
-          <p class="card__category">¿Cómo nos diferenciamos?</p>
-          <h3 class="card__heading fs-5">Enfoque centrado en el cliente, transparencia y educación financiera.</h3>
-        </div>
-      </a>
-    <div>
-  </section>
+    <section class="hero-section">
+        <div class="card-grid">
+            <a class="card" href="#">
+                <div class="card__background "
+                    style="background-image: url(../assets/camino-libertad.jpeg); height: 400px;"></div>
+                <div class="card__content text-center">
+                    <p class="card__category h5">¿Qué queremos?</p>
+                    <h3 class="card__heading fs-5 ">Queremos ser tu socio en la libertad financiera y seguridad
+                        económica</h3>
+                </div>
+            </a>
+            <a class="card" href="#">
+                <div class="card__background"
+                 style="background-image: url(../assets/educacion.jpeg); height: 400px;">
+                </div>
+                <div class="card__content text-center">
+                    <p class="card__category h5">¿Qué buscamos?</p>
+                    <h3 class="card__heading fs-5">Cultivar una comunidad de individuos financieramente alfabetizados
+                    </h3>
+                </div>
+            </a>
+            <a class="card" href="#">
+                <div class="card__background" style="background-image: url(../assets/equipo.jpeg); height: 400px;">
+                </div>
+                <div class="card__content text-center">
+                    <p class="card__category h5">¿Cómo lo logramos?</p>
+                    <h3 class="card__heading fs-5">Con un equipo comprometido y un enfoque estratégico en la inversión.
+                    </h3>
+                </div>
+                </li>
+                <a class="card" href="#">
+                    <div class="card__background"
+                        style="background-image: url(../assets/graficos.webp); height: 400px;"></div>
+                    <div class="card__content text-center">
+                        <p class="card__category h5">¿Cómo nos diferenciamos?</p>
+                        <h3 class="card__heading fs-5">Enfoque centrado en el cliente, transparencia y educación
+                            financiera.</h3>
+                    </div>
+                </a>
+                <div>
+    </section>
 
 
 
 
 
-   <div class="container text-center mt-2 mb-5">
-    <p class="fs-4 ">
-        Somos VestHouse, una plataforma innovadora que surge como respuesta a <br>los desafíos actuales en el acceso a la propiedad y 
-        la falta de educación <br> financiera en nuestro país. 
-        Nos dedicamos a democratizar la inversión inmobiliaria, <br> ofreciendo oportunidades a quienes buscan gestionar su patrimonio 
-        desde <br> montos bajos, proporcionando un enfoque justo y flexible. 
-        En VestHouse, brindamos a <br> nuestra comunidad la posibilidad de adquirir fracciones de propiedades <br> inmobiliarias, permitiendo
-        a inversionistas de todas las edades participar <br> en el mercado con inversiones asequibles.
-    </p>
-   </div>
+    <div class="container text-center mt-5 mb-5 justify-content-center shadow">
+        <p class="fs-4 ">
+            Somos VestHouse, una plataforma innovadora que surge como respuesta a <br>los desafíos actuales en el acceso
+            a la propiedad y
+            la falta de educación <br> financiera en nuestro país.
+            Nos dedicamos a democratizar la inversión inmobiliaria, <br> ofreciendo oportunidades a quienes buscan
+            gestionar su patrimonio
+            desde <br> montos bajos, proporcionando un enfoque justo y flexible.
+            En VestHouse, brindamos a <br> nuestra comunidad la posibilidad de adquirir fracciones de propiedades <br>
+            inmobiliarias, permitiendo
+            a inversionistas de todas las edades participar <br> en el mercado con inversiones asequibles.
+        </p>
+    </div>
 
 
     <div class="w-50 position-absolute top-90 start-50 translate-middle text-box-content p-4 bg-white shadow mt-5">
-        <ul class="nav nav-pills mb-3 position-absolute top-0 start-50 translate-middle fs-5 text-info" id="pills-tab" role="tablist">
+        <ul class="nav nav-pills mb-3 position-absolute top-0 start-50 translate-middle fs-5 text-info" id="pills-tab"
+            role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active btn btn-info" id="pills-home-tab" data-bs-toggle="pill"
                     data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
@@ -148,17 +170,18 @@
         </ul>
         <div class="tab-content fs-5" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                Nuestra misión es llegar a una amplia audiencia interesada en diversificar sus inversiones, 
-                especialmente en bienes raíces, a través de crowdfunding y la venta de propiedades, facilitando 
+                Nuestra misión es llegar a una amplia audiencia interesada en diversificar sus inversiones,
+                especialmente en bienes raíces, a través de crowdfunding y la venta de propiedades, facilitando
                 el acceso a oportunidades de invertir desde bajos montos.
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                Nuestra visión es crear un mundo en el que cualquier persona pueda participar en el crecimiento 
-                económico y desarrollo sostenible a través de inversiones accesibles y rentables, inspirando confianza, 
+                Nuestra visión es crear un mundo en el que cualquier persona pueda participar en el crecimiento
+                económico y desarrollo sostenible a través de inversiones accesibles y rentables, inspirando confianza,
                 transparencia, inclusión financiera y responsabilidad social a nivel global.
             </div>
             <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                Facilitar el acceso a viviendas a través de la venta de propiedades y fracciones, ofreciendo oportunidades de adquisición  
+                Facilitar el acceso a viviendas a través de la venta de propiedades y fracciones, ofreciendo
+                oportunidades de adquisición
                 de bienes raíces a un público diverso y amplio.
             </div>
         </div>
@@ -167,63 +190,91 @@
     <div class="bg-image img-fluid">
         <img src="../assets/casa3.jpeg" class="bg-image">
         <div class="container texto-centrado text-black">
-            <h1 class="fs-1">¿Que hemos logrado?</h1>
-          <p class="fs-4">En VestHouse, hemos logrado transformar vidas a través de la inversión inteligente en el mercado inmobiliario. Gracias a nuestro enfoque 
-            transparente y centrado en el cliente, hemos facilitado el camino hacia la propiedad para innumerables personas. Nuestro compromiso con la 
-            excelencia y la educación financiera ha permitido que nuestros clientes construyan un futuro sólido y seguro.
-            Desde nuestros inicios, hemos sido pioneros en brindar oportunidades de inversión accesibles y rentables, marcando una diferencia tangible 
-            en la vida de quienes confían en nosotros. Nuestra red de expertos en bienes raíces y educadores financieros trabaja incansablemente para garantizar que 
-            cada transacción sea una experiencia enriquecedora y satisfactoria. 
-        </p>
+            <h1 class="fs-1 text-info card-grid w-100">¿Que hemos logrado?</h1>
+            <p class="fs-4">En VestHouse, hemos logrado transformar vidas a través de la inversión inteligente en el
+                mercado inmobiliario. Gracias a nuestro enfoque
+                transparente y centrado en el cliente, hemos facilitado el camino hacia la propiedad para innumerables
+                personas. Nuestro compromiso con la
+                excelencia y la educación financiera ha permitido que nuestros clientes construyan un futuro sólido y
+                seguro.
+                Desde nuestros inicios, hemos sido pioneros en brindar oportunidades de inversión accesibles y
+                rentables, marcando una diferencia tangible
+                en la vida de quienes confían en nosotros. Nuestra red de expertos en bienes raíces y educadores
+                financieros trabaja incansablemente para garantizar que
+                cada transacción sea una experiencia enriquecedora y satisfactoria.
+            </p>
         </div>
-      </div>
-      
-    
-    <div class="d-flex flex-column justify-content-end align-items-center" style="height: 40vh;">
-        <h2 class="font-weight-bold mb-0">Nuestra evolución</h2>
-        <p class="text-muted text-muted mb-0">Somos <br> Ana Sofia Castrillón, Valentina Acevedo y Danisson Galvis</p>
     </div>
 
 
-    <div class="container" style="margin-top: 10px;">                      
+    <div class="d-flex flex-column justify-content-end align-items-center" style="height: 45vh;">
+        <h2 class="font-weight-bold mb-0 text-info">Nuestra evolución</h2>
+        <br>
+        <p class=" text-dark mb-0 text-center">Somos: <br> Ana Sofia Castrillón, Valentina Acevedo y Danisson Galvis</p>
+    </div>
+
+
+    <div class="container" style="margin-top: 10px;">
         <div class="row">
             <div class="col">
                 <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
                     <div class="timeline-step">
-                        <div class="timeline-content " data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
+                        <div class="timeline-content " data-toggle="popover" data-trigger="hover" data-placement="top"
+                            title="" data-content="And here's some amazing content. It's very engaging. Right?"
+                            data-original-title="2003">
                             <div class="inner-circle bg-info"></div>
-                            <p class="h6 mt-3 mb-1">Iniciamos</p>
-                            <p class="h6 text-muted mb-0 mb-lg-0"> Durante todo el proceso, lideran el proyecto "VestHouse" en su universidad. Ambas fundadores aportaron sus conocimientos y habilidades en el desarrollo de la plataforma y en la educación sobre la importancia de crear un portafolio de inversiones en bienes raíces y de sus afiliados como socios.</p>
+                            <p class="h6 mt-3 mb-1">Nuestros Inicios:</p>
+                            <br>
+                            <p class="h6 text-muted mb-0 mb-lg-0"> Durante todo el proceso, lideran el proyecto
+                                "VestHouse" en su universidad. Ambas fundadores aportaron sus conocimientos y
+                                habilidades en el desarrollo de la plataforma y en la educación sobre la importancia de
+                                crear un portafolio de inversiones en bienes raíces y de sus afiliados como socios.</p>
                         </div>
                     </div>
                     <div class="timeline-step">
-                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2004">
+                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top"
+                            title="" data-content="And here's some amazing content. It's very engaging. Right?"
+                            data-original-title="2004">
                             <div class="inner-circle bg-info"></div>
-                            <p class="h6 mt-3 mb-1">Primeros avances</p>
-                            <p class="h6 mt-3 mb-1">Octubre 2023</p>
-                            <p class="h6 text-muted mb-0 mb-lg-0"> Concepción de la idea para el proyecto "VestHouse" en RIWI.</p>
-                            <br><p class="h6 mt-3 mb-1">Noviembre 2023</p>
-                            <p class="h6 text-muted mb-0 mb-lg-0"> Investigación inicial sobre el mercado de inversiones en bienes raíces y desarrollo de un plan de negocio.</p> 
+                            <p class="h6 mt-3 mb-1">Primeros avances:</p>
+                            <br>
+                            <p class="h6  mb-1">Octubre 2023</p>
+                            <p class="h6 text-muted mb-0 mb-lg-0"> Concepción de la idea para el proyecto "VestHouse" en
+                                RIWI.</p>
+                            <br>
+                            <p class="h6 mt-3 mb-1">Noviembre 2023</p>
+                            <p class="h6 text-muted mb-0 mb-lg-0"> Investigación inicial sobre el mercado de inversiones
+                                en bienes raíces y desarrollo de un plan de negocio.</p>
                         </div>
                     </div>
                     <div class="timeline-step">
-                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
+                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top"
+                            title="" data-content="And here's some amazing content. It's very engaging. Right?"
+                            data-original-title="2005">
                             <div class="inner-circle bg-info"></div>
                             <p class="h6 mt-3 mb-1">Primera venta</p>
-                            <p class="h6 mt-3 mb-1">Diciembre 2023</p>
-                            <p class="h6 text-muted mb-0 mb-lg-0">  Lanzamiento de la plataforma "VestHouse" de inversiones en bienes raíces de manera piloto.</p>
-                            <br><p class="h6 mt-3 mb-1">Enero 2024</p>
-                            <p class="h6 text-muted mb-0 mb-lg-0"> Investigación inicial sobre el mercado de inversiones en bienes raíces y desarrollo de un plan de negocio.</p> 
-                        </div> 
+                            <br>
+                            <p class="h6 mt-0 mb-1">Diciembre 2023</p>
+                            <p class="h6 text-muted mb-0 mb-lg-0"> Lanzamiento de la plataforma "VestHouse" de
+                                inversiones en bienes raíces de manera piloto.</p>
+                            <br>
+                            <p class="h6 mt-3 mb-1">Enero 2024</p>
+                            <p class="h6 text-muted mb-0 mb-lg-0"> Investigación inicial sobre el mercado de inversiones
+                                en bienes raíces y desarrollo de un plan de negocio.</p>
+                        </div>
                     </div>
 
 
                     <div class="timeline-step">
-                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2004">
+                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top"
+                            title="" data-content="And here's some amazing content. It's very engaging. Right?"
+                            data-original-title="2004">
                             <div class="inner-circle bg-info"></div>
                             <p class="h6 mt-3 mb-1">Primero $1000 USD en venta de fracciones</p>
-                            <br><p class="h6 mt-3 mb-1">Marzo 2024</p>
-                            <p class="h6 text-muted mb-0 mb-lg-0">Alcanzamos el hito de $1000 en ventas de fracciones inmobiliarias, marcando un logro significativo en nuestro crecimiento.</p> 
+                            <br>
+                            <p class="h6 mb-1">Marzo 2024</p>
+                            <p class="h6 text-muted mb-0 mb-lg-0">Alcanzamos el hito de $1000 en ventas de fracciones
+                                inmobiliarias, marcando un logro significativo en nuestro crecimiento.</p>
                         </div>
                     </div>
 
@@ -233,149 +284,193 @@
     </div>
 
 
-   
 
-    <h2 class="text-center mt-5">Nuestra comunidad</h2>
+
+    <h2 class="text-center mt-5 text-info">Nuestra comunidad</h2>
     <section class="comunidad row">
         <div class="wrapper-grey padded">
             <div class="container">
-                <div class="col-xs-12 col-sm-4 p-4 ps-5">
-                    <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../assets/comu1.jpg');">
+                <div class="col-xs-12 col-sm-4 p-4 ps-5 shadow">
+                    <div class="card"
+                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../assets/comu1.jpg');">
                         <div class="card-description">
-                            <h4 class="fs-6">¡Gracias a VestHouse, he logrado diversificar mis ingresos y asegurar mi futuro financiero!</h4>
+                            <h4 class="fs-6">¡Gracias a VestHouse, he logrado diversificar mis ingresos y asegurar mi
+                                futuro financiero!</h4>
                         </div>
                     </div>
-                </div> 
-                <div class="col-xs-12 col-sm-4 p-4">
-                  <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../assets/comu3.jpeg');">
-                    <div class="card-description">
-                        <h4 class="fs-6">VestHouse no solo me ayudó a encontrar una propiedad, sino que me brindó las herramientas y el conocimiento 
-                            necesario para invertir con confianza en el futuro. ¡Gracias por todo!</h4>
-                    </div>
-                  </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 p-4">
-                  <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../assets/comu4.jpeg');">
-                    <div class="card-description">
-                      <h4 class="fs-6">"¡Gracias a VestHouse, finalmente tengo mi propio hogar! No puedo agradecer lo suficiente por su apoyo y asesoramiento en todo el proceso. 
-                        ¡Una experiencia excepcional!"</h4>
+                <div class="col-xs-12 col-sm-4 p-4 shadow">
+                    <div class="card"
+                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../assets/comu3.jpeg');">
+                        <div class="card-description">
+                            <h4 class="fs-6">VestHouse no solo me ayudó a encontrar una propiedad, sino que me brindó
+                                las herramientas y el conocimiento
+                                necesario para invertir con confianza en el futuro. ¡Gracias por todo!</h4>
+                        </div>
                     </div>
-                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 p-4 shadow">
+                    <div class="card"
+                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../assets/comu4.jpeg');">
+                        <div class="card-description">
+                            <h4 class="fs-6">"¡Gracias a VestHouse, finalmente tengo mi propio hogar! No puedo agradecer
+                                lo suficiente por su apoyo y asesoramiento en todo el proceso.
+                                ¡Una experiencia excepcional!"</h4>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-          </div>
+        </div>
 
-          <div class="wrapper-grey padded">
+        <div class="wrapper-grey padded">
             <div class="container">
-                <div class="col-xs-12 col-sm-4 p-4">
-                    <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../assets/comu5.webp');">
+                <div class="col-xs-12 col-sm-4 p-4 shadow">
+                    <div class="card"
+                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../assets/comu5.webp');">
                         <div class="card-description">
-                            <h4 class="fs-6">¡Increíblemente feliz con mi retorno de inversión gracias a VestHouse! Su enfoque centrado en el cliente 
+                            <h4 class="fs-6">¡Increíblemente feliz con mi retorno de inversión gracias a VestHouse! Su
+                                enfoque centrado en el cliente
                                 y su dedicación al éxito de sus inversionistas son incomparables."</h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 p-4">
-                  <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../assets/comu2.jpeg');">
-                    <div class="card-description">
-                        <h4 class="fs-6">La ética empresarial y el compromiso social de VestHouse son inspiradores. ¡No solo estoy construyendo mi propio futuro, 
-                            sino también contribuyendo a un mundo mejor gracias a ellos!</h4>
+                <div class="col-xs-12 col-sm-4 p-4 shadow">
+                    <div class="card"
+                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../assets/comu2.jpeg');">
+                        <div class="card-description">
+                            <h4 class="fs-6">La ética empresarial y el compromiso social de VestHouse son inspiradores.
+                                ¡No solo estoy construyendo mi propio futuro,
+                                sino también contribuyendo a un mundo mejor gracias a ellos!</h4>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 p-4">
-                  <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../assets/comu6.webp');">
-                    <div class="card-description">
-                        <h4 class="fs-6">Como inversor novato, me sentí respaldado y guiado en todo momento por el equipo de VestHouse. 
-                            ¡Una experiencia verdaderamente enriquecedora!</h4>
+                <div class="col-xs-12 col-sm-4 p-4 shadow">
+                    <div class="card"
+                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../assets/comu6.webp');">
+                        <div class="card-description">
+                            <h4 class="fs-6">Como inversor novato, me sentí respaldado y guiado en todo momento por el
+                                equipo de VestHouse.
+                                ¡Una experiencia verdaderamente enriquecedora!</h4>
+                        </div>
                     </div>
-                  </div>
                 </div>
 
             </div>
-          </div>
+        </div>
     </section>
+    <section>
+        <!-- <div class="container my-5"> -->
+        <!-- Footer -->
+        <footer class="text-center text-lg-start text-white" style="background-color: #45526e">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Links -->
+                <section class="">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">
+                                VestHouse
+                            </h6>
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">
+                                Useful links
+                            </h6>
+                            <p>
+                                <a class="text-white">Your Account</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Become an Affiliate</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Shipping Rates</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Help</a>
+                            </p>
+                        </div>
+
+                        <!-- Grid column -->
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                            <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
+
+                <hr class="my-3">
+
+                <!-- Section: Copyright -->
+                <section class="p-3 pt-0">
+                    <div class="row d-flex align-items-center">
+                        <!-- Grid column -->
+                        <div class="col-md-7 col-lg-8 text-center text-md-start">
+                            <!-- Copyright -->
+                            <div class="p-3">
+                                © 2020 Copyright:
+                                <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                            </div>
+                            <!-- Copyright -->
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                            <!-- Facebook -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="fab fa-facebook-f"></i></a>
+
+                            <!-- Twitter -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="fab fa-twitter"></i></a>
+
+                            <!-- Google -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="fab fa-google"></i></a>
+
+                            <!-- Instagram -->
+                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                </section>
+                <!-- Section: Copyright -->
+                <!-- </div> -->
+                <!-- Grid container -->
+        </footer>
+        <!-- Footer -->
+        </div>
+        <!-- End of .container -->
+    </section>
+
 
 
 
 
     <script src="./js/chatBot.js"></script>
     <script type="module" src="./js/about_us.js"></script>
-
-    <footer class="footer-sec">
-        <div class="main">
-            <div class="logo row">
-                <div class="footer-header">
-                    <img src="https://i.postimg.cc/tgk8X2w7/manik-low-resolution-logo-white-on-transparent-background.png"
-                        class="manik" alt="" />
-                </div>
-                <div class="logo-des">
-                    <p>
-                        There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration in some form, by
-                        injected humour.
-                    </p>
-
-                    <a href="#" class="btn-know">Know More</a>
-                </div>
-            </div>
-
-            <div class="office row">
-                <div class="footer-header">
-                    <h3>Office</h3>
-                </div>
-                <div class="office-des">
-                    <p>
-                        here are <br />
-                        many variations of passages<br />of Lorem Ipsum<br />available
-                    </p>
-
-                    <a href="#">manikmaity.haker2003@gmail.com</a>
-
-                    <p class="num">+91-9999999999</p>
-                </div>
-            </div>
-
-            <div class="link row">
-                <div class="footer-header">
-                    <h3>Links</h3>
-                </div>
-
-                <div class="link-des">
-                    <a href="#" class="footer-links">Home</a>
-                    <a href="#" class="footer-links">About</a>
-                    <a href="#" class="footer-links">Services</a>
-                    <a href="#" class="footer-links">Galary</a>
-                    <a href="#" class="footer-links">Contact</a>
-                </div>
-            </div>
-
-            <div class="newsletter row">
-                <div class="footer-header">
-                    <h3>Newsletter</h3>
-                </div>
-                <div class="newsletter-des">
-                    <div class="subcribe">
-                        <i class="sub-icon ri-mail-check-fill"></i>
-                        <input type="mail" placeholder="Enter Email ID" required />
-                        <i class="sub-icon ri-arrow-right-line"></i>
-                    </div>
-                    <div class="icons">
-                        <a href="#"><i class="social-icon ri-facebook-fill"></i></a>
-                        <a href="#"><i class="social-icon ri-instagram-line"></i></a>
-                        <a href="#"><i class="social-icon ri-linkedin-fill"></i></a>
-                        <a href="#"><i class="social-icon ri-github-line"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <hr />
-
-            <p>© Copyright 2022 Manik Maity.</p>
-        </div>
-    </footer>
 
 </body>
 
