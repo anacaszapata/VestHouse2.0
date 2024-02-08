@@ -9,7 +9,7 @@ form.addEventListener("submit",(event)=>{
 
 
 
-    const palabras = ["necesito ayuda","comprar casa","comprar","hola","casa","inversion"]
+    const palabras = ["hola","afiliado","rendimiento","educacion","requisitos","casa","gano dinero"]
 
 
 function buscarPalabra(userRes){
@@ -21,31 +21,24 @@ function buscarPalabra(userRes){
         if (textoMinusculas.includes(palabra.toLowerCase())) {
             console.log(`Se encontró la palabra: ${palabra}`);
             if (palabra === "hola") {
-                respond1 = "Hola! soy el chat bot \n y estoy aqui para ayudarte"
+                respond1 = "¡Hola! Estoy aquí para ayudarte en lo que necesites. ¿En qué puedo asistirte hoy?"
                 burbledraw(respond1)
-            }else if(palabra == "comprar"){
-                respond2 = "Claro!  que deseas comprar"
+            }else if(palabra == "afiliado"){
+                respond2 = "Nos alegra que estés interesado en nuestro programa de afiliados. Puedes registrarte en nuestra página web o contáctanos para obtener más información sobre cómo unirte."
                 burbledraw(respond2)
-            }else if (palabra == "casa"){
-                respond3 = "propiedad"
+            }else if (palabra == "rendimiento"){
+                respond3 = "El rendimiento promedio de nuestras inversiones varía dependiendo del tipo de activos y del período de tiempo. Te recomendamos contactarnos para obtener información más detallada sobre el rendimiento"
                 burbledraw(respond3)
-            }else if (palabra == "comprar casa"){
-                respond4 = "puedes contactarte con unos de nuestros asesores"
+            }else if (palabra == "educacion"){
+                respond4 = "¡Por supuesto! Ofrecemos una amplia gama de recursos educativos para ayudarte a mejorar tus habilidades financieras."
                 burbledraw(respond4)
-            }else if(palabra == "necesito ayuda"){
-                respond5 = "Cuentame con que te puedo ayudar"
+            }else if(palabra == "requisitos"){
+                respond5 = "Te invitamos a explorar nuestro marco legal en nuestra página web para obtener detalles específicos sobre los requisitos de inversión. ¡Esperamos que encuentres la información que necesitas! Si tienes más preguntas, no dudes en contactarnos"
                 burbledraw(respond5)
-            }else if (palabra == "como invertir"){
-                respond6 = "a traves"
+            }else if (palabra == "casa"){
+                respond6 = "Sí, contamos con una variedad de casas disponibles para la venta en diferentes ubicaciones y rangos de precios. "
                 burbledraw(respond6)
-            }else if (palabra == "inversion"){
-                respond7 = "con vesthouse"
-                burbledraw(respond7)
             }
-
-
-
-
 
             return; 
         }
@@ -88,6 +81,7 @@ function burbledraw(respond){
 
 }
 
+const chat = document.querySelector(".chat");
 
 const butchat = document.querySelector(".chatbotBut")
 butchat.addEventListener('click',(event)=>{
@@ -95,13 +89,12 @@ butchat.addEventListener('click',(event)=>{
     console.log("bot");
 
     const bot = document.querySelector(".chat");
-    const currentOpacity = parseFloat(getComputedStyle(bot).opacity);
-
-    // Cambiar la opacidad según el valor actual
-    bot.style.opacity = currentOpacity === 0 ? 1 : 0;
-
-
-
-
+    if (chat.style.display == "flex"){
+        chat.style.display = "none"
+    }else{
+        chat.style.display = "flex"
+    }
 
 })
+
+
