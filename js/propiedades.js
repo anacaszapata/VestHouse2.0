@@ -89,7 +89,7 @@ function renderProperties(type) {
                   aria-valuemax="100">${properties[i].progreso}%</div>
               </div>
               <div class="d-flex justify-content-start">
-                <img width="50" src="../assets/coin.jpeg" alt="">
+                <img width="50" src="../assets/coins.jpeg" alt="">
                 <span class="text-center">222 fracciones disponibles</span>
               </div>
             </div>
