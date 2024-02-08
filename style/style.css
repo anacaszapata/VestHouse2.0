@@ -384,7 +384,6 @@ input[type=mail]{
   align-items: flex-end;
   perspective: 250px;
   margin: 25px;
-  padding: 0%;
 }
 
 .cover-image {

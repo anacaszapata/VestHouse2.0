@@ -68,9 +68,7 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="./propiedades.html">Propiedades</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./galeria.html">Galeria</a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="./academia.html">Academia</a>
                         </li>
@@ -186,7 +184,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <button id="btnInvierteAhora" class="btn btn-info w-100 mt-3">Invierte ahora</button>
+        <button id="btnInvierteAhora" class="btn btn-info w-100 mt-3" href="./propiedades.html">Invierte ahora</button>
 
     </section>
 
@@ -230,15 +228,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mx-5">
-                <div style="width: 18rem; border-style: none;">
-                    <img class="card-img-top" style="border-radius:50%;" src="../assets/IMAGENDANI.png"
-                        alt="Card image cap">
-                    <div class="card-body shadow">
-                        <h5 class="card-text" class="bold" id="desarrolladorDani">CEO-DESARROLLADOR DE SOFTWARE</h5>
-                    </div>
-                </div>
-            </div>
+            
 
     </section>
 
@@ -249,9 +239,9 @@
             <div class="card card-items-principal p-5" style="width: 370px;">
                 <img src="../assets/inflacion.png" class="card-img-top" alt="..." />
                 <h5>
-                    <div class="card-body text-center text-info">Proteger tu dinero de la inflacion
+                    <div class="card-body text-center text-info" id="proteger">Proteger tu dinero de la inflacion
                 </h5>
-                <p class="card-text text-center" id="misionTexto">
+                <p class="card-text text-center" id="protegerTexto">
                     Invertir es lo más indicado si quieres mantener porcentaje de tu dinero seguro de la inflacion.
                 </p>
             </div>
@@ -261,8 +251,8 @@
             <div class="card mx-5 card-items-principal p-5" style="width: 370px; ">
                 <img src="../assets/diversificacion.png" class="card-img-top" alt="..." />
                 <div class="card-body text-center">
-                    <h5 class="card-title  text-info">Diversificar tu portafolio de inversion</h5>
-                    <p class="card-text">
+                    <h5 class="card-title  text-info" id="portafolio">Diversificar tu portafolio de inversion</h5>
+                    <p class="card-text" id="portafolioTexto">
                         Entre más inversiones tengas diversificadas mayores serán los ingresos pasivos.
                     </p>
 
@@ -273,8 +263,8 @@
             <div class="card card-items-principal p-5" style="width: 370px;">
                 <img src="../assets/rentabilidad.png" class="card-img-top" alt="..." />
                 <div class="card-body text-center">
-                    <h5 class="card-title text-center text-info">Rentabilidad</h5>
-                    <p class="card-text ">
+                    <h5 class="card-title text-center text-info" id="rentabilidad">Rentabilidad</h5>
+                    <p class="card-text" id="rentabilidadTexto">
                         Con un porcentaje fijo anual, puedes ganar hasta el 8% de cada fraccion adquirida.</p>
 
                 </div>
@@ -284,8 +274,8 @@
             <div class="card card-items-principal p-4 mx-5" style="width: 370px;">
                 <img src="../assets/seguridad.png" class="card-img-top" alt="..." />
                 <div class="card-body text-center">
-                    <h5 class="card-title text-center text-info">Guia y soporte</h5>
-                    <p class="card-text">
+                    <h5 class="card-title text-center text-info" id="guia">Guia y soporte</h5>
+                    <p class="card-text" id="guiaTexto">
                         Tendrás todo el material y acompañamiento mediante reuniones, webinars, sección de preguntas
                         y
                         respuestas para que obtengas la administración óptima del método que se haya ajustado más a
@@ -301,12 +291,12 @@
 
     <section id="invertir-ahora" class="mt-4 d-flex justify-content-center px-5 gap-5 bg-info">
         <div class="w-50">
-            <h2>Simula tu inversión</h2>
+            <h2 id="simula">Simula tu inversión</h2>
             <form id="form-simulador">
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Ubicacion</label>
+                    <label for="exampleInputEmail1" class="form-label" id="ubicacion">Ubicación</label>
                     <select class="form-control" id="ubicacion-simulador">
-                        <option value="" disabled selected hidden>
+                        <option value="" disabled selected hidden id="selecciona">
                             Selecciona tu proyecto
                         </option>
                         <option>Oasis</option>
@@ -316,9 +306,9 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Monto</label>
+                    <label for="exampleInputPassword1" class="form-label" id="monto">Monto</label>
                     <select class="form-control" id="monto-simulador">
-                        <option value="" disabled selected hidden>
+                        <option value="" disabled selected hidden id="inversionPregunta">
                             ¿Cuanto quieres invertir?
                         </option>
                         <option>1.000.000</option>
@@ -330,10 +320,10 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Tiempo</label>
+                    <label for="exampleInputPassword1" class="form-label" id="tiempo">Tiempo</label>
                     <select class="form-control" id="tiempo-simulador">
-                        <option value="" disabled selected hidden>
-                            ¿Por cuanto tiempo desas invertir
+                        <option value="" disabled selected hidden id="tiempoPregunta">
+                            ¿Por cuánto tiempo desas invertir?
                         </option>
                         <option>3 mes</option>
                         <option>6 mes</option>
@@ -344,11 +334,11 @@
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                    <label class="form-check-label" for="exampleCheck1">Acepto lo terminos y condiciones de la politica
+                    <label class="form-check-label" for="exampleCheck1" id="requerimiento">Acepto lo terminos y condiciones de la politica
                         de tratamiento de
                         datos</label>
                 </div>
-                <button type="submit" class="btn btn-info w-100">Enviar</button>
+                <button type="submit" class="btn btn-info w-100" id="enviar">Enviar</button>
             </form>
         </div>
         <div class="w-50">
@@ -367,9 +357,9 @@
             <hr />
             <article class="d-flex justify-content-between">
                 <div>
-                    <p>Inversionista</p>
-                    <p>Ubicación</p>
-                    <p>Monto</p>
+                    <p id="inversionista">Inversionista</p>
+                    <p id="ubicacion">Ubicación</p>
+                    <p id="monto">Monto</p>
                 </div>
 
                 <div>
@@ -433,34 +423,36 @@
 
     <section class="mt-4 d-flex justify-content-center px-5 gap-5" style="margin-bottom: 10rem">
         <div class="w-100">
-            <h1 class="text-info">Preguntas frecuentes</h1>
+            <h1 class="text-info" id="pf">Preguntas frecuentes</h1>
             <div class="w-50">
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
-                            aria-selected="true">
+                            aria-selected="true" id="inversionMa">
                             Inversion
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link " id="pills-profile-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
-                            aria-selected="false">
+                            aria-selected="false" id="riesgoMA">
                             Riesgo
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
-                            aria-selected="false">
+                            aria-selected="false" id="reinversionMA">
                             Reinversion
                         </button>
                     </li>
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                        La inversión colaborativa en VestHouse es 100% digital 💻 y puedes invertir siguiendo los siguientes
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                        aria-labelledby="pills-home-tab" id="inversionColab">
+                        La inversión colaborativa en VestHouse es 100% digital 💻 y puedes invertir siguiendo los
+                        siguientes
                         pasos:
                         <hr>
                         1.Registrarte
@@ -472,45 +464,52 @@
                         4.Llenar datos personales y firmar el contrato
                         <br>
                         5.Paga tu inversión
-    
+
                     </div>
 
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+
+
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" id="riesgoME">
                         Riesgo de cambio de condiciones del mercado:
-                        <hr>
+                        <hr id="condicionesME">
                         Las condiciones del mercado inmobiliario pueden cambiar rápidamente debido a factores
                         macroeconómicos, cambios en las tendencias de consumo, desastres naturales u otros eventos
-                        imprevistos. Estos cambios pueden tener un impacto significativo en el valor de las propiedades y en
+                        imprevistos. Estos cambios pueden tener un impacto significativo en el valor de las propiedades
+                        y en
                         la rentabilidad de las inversiones.
                     </div>
-                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" id="preguntaDinero">
                         ¿CÓMO GANO DINERO?
-                        <br>
-                        Fracción: Los retornos de los inversionistas se generan a partir de los ingresos por el alquiler de
+                        <br id="fraccionInv">
+                        Fracción: Los retornos de los inversionistas se generan a partir de los ingresos por el alquiler
+                        de
                         la propiedad donde hiciste la inversión.
-                        <hr>
+                        <hr id="venta">
                         Venta: Una vez compres la propiedad esa será la mayor ganacia puesto que la valorización anual
                         aumentará su valor y por ende será una mayor ganancia para el propietario.
-                        <hr>
+                        <hr id="comision">
                         Comisión: Cada vez que traigas a algun nuevo inversionista y este haga parte de VestHouse podrás
                         ganar una comisión por cada persona.
                     </div>
                 </div>
             </div>
-            <h1 class="text-info">Modelo legal</h1>
+            <br>
+            <h1 class="text-info" id="modelo">Modelo legal</h1>
             <p>
-                <a style="font-size: 20px;" href="../assets/Captura de pantalla 2024-02-07 033131.png" class="font-dark">
-                    <i>Leer más...</i>
+                <a style="font-size: 20px;" href="../assets/Captura de pantalla 2024-02-07 033131.png"
+                    class="font-dark">
+                    <i id="leer">Leer más...</i>
                 </a>
             </p>
             <a href="./academia.html" style="text-decoration: none; color: black;">
-                <h1 class="text-info">Academia</h1>
+                <h1 class="text-info" href="./academia.html" id="academiaLink">Academia</h1>
             </a>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta neque
-                eum laboriosam cum blanditiis similique consequuntur minima autem
-                dolorem ratione aperiam incidunt possimus fugit, quis reiciendis
-                maiores saepe, debitis a?
+            <p id="seccionAcademia">
+                En la sección de academia, descubrirás una amplia gama de contenidos recomendados diseñados para
+                ayudarte a desarrollar tu portafolio de inversiones. Además, tendrás acceso a la inscripción para
+                nuestros webinars, dirigidos por destacados coaches financieros y otros invitados especiales de
+                renombre.
             </p>
         </div>
     </section>
@@ -550,18 +549,17 @@
                         <!-- Grid column -->
                         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                             <p>
-                                <img src="../assets/Logo blanco.png" width="150px" >
+                                <img src="../assets/Logo blanco.png" width="150px">
                             </p>
                         </div>
-                        
+
 
                         <!-- Grid column -->
                         <div class="  col-xl-3 mx-5 mt-3">
                             <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                            <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-                            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                            <p><i class="fas fa-home mr-3"></i> </p>
+                            <p><i class="fas fa-envelope mr-3"></i> vesthouseinvestment@gmail.com</p>
+           
                         </div>
                         <!-- Grid column -->
                     </div>
@@ -577,42 +575,32 @@
                         <!-- Grid column -->
                         <div class="col-md-7 col-lg-8 text-center text-md-start">
                             <!-- Copyright -->
-                            <div class="p-3">
-                                © 2020 Copyright:
-                                <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                            <div class="p-3 input">
+                                Ingresa tu pregunta
+                              
                             </div>
                             <!-- Copyright -->
                         </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
+                       
                         <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-                            <!-- Facebook -->
+                            
                             <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
-                                    class="fab fa-facebook-f"></i></a>
-
-                            <!-- Twitter -->
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
-                                    class="fab fa-twitter"></i></a>
-
-                            <!-- Google -->
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
-                                    class="fab fa-google"></i></a>
+                                    class="fab fa-twitter"> <img src="../assets/wpp_blue.png" alt="">WhatsApp</i></a>
 
                             <!-- Instagram -->
                             <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
-                                    class="fab fa-instagram"></i></a>
+                                    class="fab fa-instagram"
+                                    href="https://www.instagram.com/vesthousecol?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                                    <img src="../assets/ig.png" alt=""> Instagram</i></a>
                         </div>
                         <!-- Grid column -->
                     </div>
                 </section>
-                <!-- Section: Copyright -->
-                <!-- </div> -->
-                <!-- Grid container -->
+                
         </footer>
         <!-- Footer -->
         </div>
-        <!-- End of .container -->
+       
     </section>
     <script src="../js/index.js"></script>
 </body>
