@@ -168,7 +168,7 @@
 }
 
 .textsCHats {
-    position: relative;
+    position: absolute;
     width: 90%;
     max-height: calc(80% - 60px); /* Resta el alto de la barra de entrada de mensajes */
     background-color: white;
